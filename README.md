@@ -28,3 +28,6 @@ migrate
 После этого при необходимости можно вручную чистить  
 ```$ docker-compose exec web python manage.py flush --no-input```  
 ```$ docker-compose exec web python manage.py migrate```
+
+Создание администратора  
+```$ docker-compose exec web python3 manage.py createsuperuser```
