@@ -1,4 +1,5 @@
 from django.db import models
+from alytics.tasks import create_graphic
 
 
 class GraphFunc(models.Model):
@@ -12,15 +13,15 @@ class GraphFunc(models.Model):
     def __str__(self) -> str:
         return str(self.title)
 
-    def save(self, *args, **kwargs):
-        do_something()
-        super().save(*args, **kwargs)  # Call the "real" save() method.
-        do_something_else()
+    # def save(self, *args, **kwargs):
+    #     do_something()
+    #     super().save(*args, **kwargs)  # Call the "real" save() method.
+    #     do_something_else()
 
 
 def grahp_func_save(sender, instance, signal, *args, **kwargs):
     '''create image'''
-    pass
+    create_graphic.delay(instance.pk)
 
 
 # https://code.tutsplus.com/ru/tutorials/using-celery-with-django-for-background-task-processing--cms-28732
