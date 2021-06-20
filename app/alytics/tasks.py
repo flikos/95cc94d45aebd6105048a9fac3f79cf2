@@ -1,4 +1,6 @@
+# Зацикливается
 # from alytics.models import GraphFunc
+
 from celery import shared_task
 
 from alytics.celery import celery_app

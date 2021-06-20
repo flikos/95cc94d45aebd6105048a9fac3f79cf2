@@ -1,4 +1,6 @@
 from django.db import models
+
+# Приводит к зацикливанию с таском
 from alytics.tasks import create_graphic
 
 
