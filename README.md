@@ -1,8 +1,5 @@
 # django-and-postgres-on-docker
-template
-
-
-
+template based on  
 https://webdevblog.ru/kak-ispolzovat-django-postgresql-i-docker/
 
 
@@ -31,3 +28,10 @@ migrate
 
 Создание администратора  
 ```$ docker-compose exec web python3 manage.py createsuperuser```
+
+
+Запуск Celery  
+~~ docker-compose exec web celery -A alytics worker ~~
+
+Реализован в докере
+
