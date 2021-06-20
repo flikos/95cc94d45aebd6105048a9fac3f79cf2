@@ -31,4 +31,7 @@ migrate
 
 
 Запуск Celery  
-```$ docker-compose exec web celery -A alytics worker```
+~~ docker-compose exec web celery -A alytics worker ~~
+
+Реализован в докере
+
