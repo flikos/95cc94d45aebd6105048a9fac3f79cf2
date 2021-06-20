@@ -25,16 +25,21 @@ def create_graphic(graphfunc_id):
     tt = np.arange(start_dt, end_dt, gr.dt*60*60)
 
     text_func = gr.title
+    try:
+        y = np.array([eval(text_func) for t in tt])
 
-    y = np.array([eval(text_func) for t in tt])
+        fig, ax = plt.subplots( nrows=1, ncols=1 )  # create figure & 1 axis
+        ax.plot(tt, y)
 
-    fig, ax = plt.subplots( nrows=1, ncols=1 )  # create figure & 1 axis
-    ax.plot(tt, y)
-    fig.savefig('to.png')   # save the figure to file
+        # TODO Создать уникальное имя по времени или uuid
+        fig.savefig(str(graphfunc_id)+'graphic.png')   # save the figure to file
+        gr.graphic(str(graphfunc_id)+'graphic.png')
+        #plt.show()
 
-    #plt.show()
-
-    plt.close(fig)    # close the figure window
+        plt.close(fig)    # close the figure window
+        
+    except Exception as e:
+        gr.func_exception = e
 
 
 

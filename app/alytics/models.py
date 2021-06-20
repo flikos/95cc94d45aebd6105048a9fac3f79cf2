@@ -7,7 +7,7 @@ class GraphFunc(models.Model):
     interval = models.IntegerField()
     dt = models.IntegerField()
     create_datetime = models.DateTimeField(auto_now=True)
-    graphic = models.ImageField(editable=False,)
+    graphic = models.ImageField(null=True, blank=True, editable=False, upload_to='images/')
     func_exception = models.TextField(null=True, blank=True, editable=False)
 
     def __str__(self) -> str:

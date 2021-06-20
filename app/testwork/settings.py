@@ -150,6 +150,8 @@ CELERY_TASK_SERIALIZER = 'json'
 # i don't know who from these better
 # i need to know
 
+# О, понял. Если в Селери.ру есть намспейс СЕЛЕРИ, то с предварительным именем!
+
 # REDIS related settings 
 REDIS_HOST = 'localhost'
 REDIS_PORT = '6379'
