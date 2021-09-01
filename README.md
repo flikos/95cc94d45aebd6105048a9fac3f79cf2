@@ -1,3 +1,5 @@
+[Описание задания](https://github.com/flikos/95cc94d45aebd6105048a9fac3f79cf2/blob/main/Тестовое%20задание.%20Начинающий%20Python%20разработчик..pdf)
+
 # django-and-postgres-on-docker
 template based on  
 https://webdevblog.ru/kak-ispolzovat-django-postgresql-i-docker/
